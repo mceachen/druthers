@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 2.0.0
+  - 1.9.3
+
+gemfile:
+  - ci/Gemfile.rails-4.0.x
+  - ci/Gemfile.rails-3.2.x
+
+env:
+  - DB=sqlite
+  - DB=mysql
+  - DB=postgresql
+
+script: bundle exec rake --trace
+
+before_script:
+  - mysql -e 'create database druthers_test'
+  - psql -c 'create database druthers_test' -U postgres

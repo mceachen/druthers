@@ -2,6 +2,8 @@
 
 Simplest performant solution to storing application-specific settings through ActiveRecord.
 
+Rails 3.2 and 4.0 are supported.
+
 ## Installation
 
 Add this line to your application's Gemfile:
