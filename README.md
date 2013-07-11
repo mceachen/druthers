@@ -1,6 +1,7 @@
 # Druthers
 
 [![Build Status](https://api.travis-ci.org/mceachen/druthers.png?branch=master)](https://travis-ci.org/mceachen/druthers)
+[![Code Climate](https://codeclimate.com/github/mceachen/druthers.png)](https://codeclimate.com/github/mceachen/druthers)
 
 ```Druthers``` is the simplest performant solution to storing application-specific settings via
 ActiveRecord.
