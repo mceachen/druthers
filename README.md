@@ -45,15 +45,19 @@ end
 
 You can get values:
 
-   Setting.quest
-   => "to find the holy grail" # <- because we defined default_quest above
+```ruby
+Setting.quest
+=> "to find the holy grail" # <- because we defined default_quest above
 
-   Setting.favourite_color
-   => nil # <- no default
+Setting.favourite_color
+=> nil # <- no default
+```
 
 You can set values:
 
-   Setting.favourite_color = "red"
+```ruby
+Setting.favourite_color = "red"
+```
 
 If you want to store more than just strings, use
 [serialize](http://apidock.com/rails/ActiveRecord/AttributeMethods/Serialization/ClassMethods/serialize),
@@ -63,15 +67,21 @@ which is in the above example, and is not required.
 
 Add this line to your application's Gemfile:
 
-    gem 'druthers'
+```
+gem 'druthers'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Add a model:
 
-    rails g model Setting key:string value:text
+```
+rails g model Setting key:string value:text
+```
 
 Edit the resulting migration to add an index. Here's a complete example:
 
