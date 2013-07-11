@@ -25,7 +25,7 @@ Rails 3.2 & 4.0 with ruby 1.9.3 & 2.0.0 are supported and
 
 Assuming your configuration is stored via a ```Setting``` model:
 
-```
+```ruby
 class Setting < ActiveRecord::Base
 
   def_druthers :quest, :favourite_colour # <- This adds class-level getter/setters for your settings.
