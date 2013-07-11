@@ -28,8 +28,11 @@ Assuming your configuration is stored via a ```Setting``` model:
 ```ruby
 class Setting < ActiveRecord::Base
 
-  def_druthers :quest, :favourite_colour # <- This adds class-level getter/setters for your settings.
-  serialize :value # < This is not required, but allows for more than just string values.
+  # Add class-level getter/setters for your settings:
+  def_druthers :quest, :favourite_colour
+
+  # This is not required, but allows for more than just string values:
+  serialize :value
 
   # This will be used as the value of `Setting.quest` if it is not set.
   def default_quest
@@ -85,7 +88,7 @@ rails g model Setting key:string value:text
 
 Edit the resulting migration to add an index. Here's a complete example:
 
-```
+```ruby
 class CreateSettings < ActiveRecord::Migration
   def change
     create_table :settings do |t|
