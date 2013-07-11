@@ -30,7 +30,13 @@ module Druthers
 
       def set_druther(key, value)
         obj = where(key: key).first_or_initialize
-        obj.update!(value: value)
+        if obj.respond_to? :update!
+          # Rails 4.x:
+          obj.update!(value: value)
+        else
+          # Rails 3.x:
+          obj.update_attributes!(value: value)
+        end
         # Only update the cache if the update! succeeded:
         druthers_cache.write(key, value)
         obj
