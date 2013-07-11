@@ -40,11 +40,11 @@ describe Setting do
     end
   end
 
-  describe 'persistence' do
+  describe 'serialized persistence' do
     it "works with arrays" do
       a = [3, 4, 5]
       Setting.things = a
-      Setting.where(key: 'things').first.value.must_equal h
+      Setting.where(key: 'things').first.value.must_equal a
     end
 
     it "works with hashes" do
