@@ -16,6 +16,6 @@ ActiveRecord::Migration.verbose = false
 require 'test_models'
 require 'minitest/autorun'
 require 'minitest/great_expectations'
-require 'mocha/setup'
+require 'minitest/reporters' unless ENV['CI']
 
 Thread.abort_on_exception = true
