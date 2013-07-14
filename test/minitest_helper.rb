@@ -17,5 +17,6 @@ require 'test_models'
 require 'minitest/autorun'
 require 'minitest/great_expectations'
 require 'minitest/reporters' unless ENV['CI']
+MiniTest::Reporters.use! unless ENV['CI']
 
 Thread.abort_on_exception = true
