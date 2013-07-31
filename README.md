@@ -43,7 +43,7 @@ class Setting < ActiveRecord::Base
   serialize :value
 
   # This will be used as the value of `Setting.quest` if it is not set.
-  def default_quest
+  def self.default_quest
     "to find the holy grail"
   end
 
