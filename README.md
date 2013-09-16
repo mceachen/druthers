@@ -47,7 +47,9 @@ class Setting < ActiveRecord::Base
     "to find the holy grail"
   end
 
-  # This validation will be only run for instances whose key == "favourite_color":
+  # This validation will be only run for instances whose key == "favourite_color"
+  # Note that this isn't a class method, as the validation needs access to the
+  # instance value.
   def validate_favourite_colour
     add_error("we're right out of teal, sorry") if value == "teal"
   end
