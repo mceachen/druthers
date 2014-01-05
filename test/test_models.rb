@@ -8,8 +8,8 @@ ActiveRecord::Schema.define(:version => 0) do
 end
 
 class Setting < ActiveRecord::Base
-  def_druthers :quest, :favourite_colour, :things, :hashish
-  serialize :value
+  def_druthers :quest, :favourite_colour, :things, :hashish, :change
+  serialize :value, CustomSerialize
 
   def self.default_quest
     "to find the holy grail"
@@ -22,4 +22,16 @@ class Setting < ActiveRecord::Base
   def validate_favourite_colour
     errors.add(:value, "invalid is invalid WERD") if value == "invalid"
   end
+  
+  class CustomSerialize
+    def self.load(val)
+      ActiveRecord::Coders::YAMLColumn.new.load(val)
+    end
+    
+    def self.dump(val)
+      val = 'bar' if val == 'foo'
+      ActiveRecord::Coders::YAMLColumn.new.dump(val)
+    end
+  end
+  
 end
