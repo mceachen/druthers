@@ -9,8 +9,7 @@ end
 
 class Setting < ActiveRecord::Base
   def_druthers :quest, :favourite_colour, :things, :hashish, :change
-  serialize :value, CustomSerialize
-
+  
   def self.default_quest
     "to find the holy grail"
   end
@@ -33,5 +32,7 @@ class Setting < ActiveRecord::Base
       ActiveRecord::Coders::YAMLColumn.new.dump(val)
     end
   end
+  
+  serialize :value, CustomSerialize
   
 end
