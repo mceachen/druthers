@@ -52,5 +52,10 @@ describe Setting do
       Setting.hashish = h
       Setting.where(key: 'hashish').first.value.must_equal h
     end
+    
+    it 'returns serialized value correctly' do
+      Setting.change = 'foo'
+      Setting.change.must_equal 'bar'
+    end
   end
 end
