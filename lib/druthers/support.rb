@@ -38,7 +38,7 @@ module Druthers
           obj.update_attributes!(value: value)
         end
         # Only update the cache if the update! succeeded:
-        druthers_cache.write(key, value)
+        druthers_cache.write(key, obj.value)
         obj
       end
 
