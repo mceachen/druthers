@@ -23,7 +23,7 @@ As opposed to ```rails-settings``` and forks, ```method_missing``` isn't used an
 ## Supported versions
 
 The latest versions of
-* Rails 3.2 & 4.0
+* Rails 3.2, 4.0, & 4.1
 * Ruby 1.9.3 & 2.0.0
 * SQLite, MySQL, and PostgreSQL
 

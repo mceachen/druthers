@@ -2,6 +2,8 @@
 
 ## v0.0.3
 
+* Rails 4.1 is supported
+
 * Fixes a bug where serialized values weren't cached properly. Thanks for the
   [description, fix and tests](https://github.com/mceachen/druthers/pull/2),
   [JKillian](https://github.com/JKillian)!

@@ -1,7 +1,8 @@
 require 'minitest_helper'
 
 describe Setting do
-  before :each do
+  before do
+    Setting.druthers_cache.clear
     Setting.delete_all
   end
 
