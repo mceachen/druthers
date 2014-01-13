@@ -38,6 +38,9 @@ module Druthers
           obj.update_attributes!(value: value)
         end
         # Only update the cache if the update! succeeded:
+        # Note that we cached the obj.value, rather than the value, to make sure
+        # returned values are consistent with the serializer's result.
+        # See https://github.com/mceachen/druthers/pull/2
         druthers_cache.write(key, obj.value)
         obj
       end
