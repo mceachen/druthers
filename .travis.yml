@@ -1,13 +1,11 @@
 language: ruby
 
 rvm:
-  - 2.0.0
-  - 1.9.3
+  - 2.2.3
 
 gemfile:
   - ci/Gemfile.rails-4.1.x
-  - ci/Gemfile.rails-4.0.x
-  - ci/Gemfile.rails-3.2.x
+  - ci/Gemfile.rails-4.2.x
 
 env:
   - DB=sqlite

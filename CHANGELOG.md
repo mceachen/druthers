@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.0
+
+* Rails 4.2 and Ruby 2.2.x is supported
+* Dropped support for Rails 3.2, 4.0 and unsupported Ruby versions
+
 ## v0.0.3
 
 * Rails 4.1 is supported
